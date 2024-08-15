@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">Parthiv<span>Kumar</span></a>
+      <div class="menu-btn" id="menu-btn">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav class="navbar" id="navbar">
+        <a href="#home">HOME</a>
+        <a href="#publications">PUBLICATIONS</a>
+        <a href="#projects">PROJECTS</a>
+        
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Helloo,</h3>
+        <h1>Parthiv here!</h1>
+        <h3><span class="typewriter" style="color: #ffad33"></span></h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+          dolores alias, nam pariatur, minima consequuntur velit ut harum
+          aperiam corporis ipsum. Eligendi vitae quas autem quidem iure saepe
+          aperiam voluptates.
+        </p>
+        <div class="social-media">
+          <a href="mailto:parthivkumargunjari@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+          <a href="https://github.com/parthiv0407"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/parthiv-kumar-gunjari/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="images/Resume.pdf" class="btn" target="_blank">Resume</a>
+      </div>
+      <div class="home-img">
+        <img src="images/profile.jpg" alt="image" />
+      </div>
+    </section>
+
+    <!-- Recent Publications Section -->
+    <section class="recent-publications" id="publications">
+      <h2 class="heading" id="publications-heading">
+        My <span>Recent Publications</span>
+      </h2>
+      <div class="publications-container">
+        <div class="publications-box">
+          <h2>The Overview of XSS Attack Detection Methods On Web Applications</h2>
+          <p>
+            This research focuses on identifying and mitigating XSS vulnerabilities in web applications, achieving high accuracy and precision in detecting attacks. Demonstrated expertise in data preprocessing, model building, and evaluating detection methodologies.
+          </p>
+          <a href="#" class="btn">PDF</a>
+        </div>
+        <div class="publications-box">
+          <h2>Enhanced Streaming Algorithms for the Maximum Directed Cut Problem Using Smoothed Snapshots</h2>
+          <p>
+            In this research paper, we introduced an enhanced streaming algorithm which significantly improves space efficiency and accuracy in areas like machine learning, network optimization, and data mining, especially when handling large graphs with limited memory.
+          </p>
+          <a href="#" class="btn">PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <h2 class="heading">My <span>Projects</span></h2>
+      <div class="projects-container">
+        <div class="projects-box">
+          <img src="images/project-img.png" alt="image" />
+          <div class="projects-layer">
+            <h4>An Android Application to Assist Formers in Regional Langunges</h4>
+            <p>
+              This project aims to develop an android
+              application to detect and ilentify crop diseases through a deep convolutional neural-network. This app helps farmers
+              to protect their crops.
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="projects-box">
+          <img src="images/project-img2.jpg" alt="image" />
+          <div class="projects-layer">
+            <h4>Ishop</h4>
+            <p>
+              This project Ishop has been developed using HTML, CSS, Bootstrap, PHP, und Mysql. The main objoctive of developing the projoct was to crente a dynamic website for shopping.
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="projects-box">
+          <img src="images/project-img3.jpg" alt="image" />
+          <div class="projects-layer">
+            <h4>Detection and Detiailed Analysis of Brain Stroke</h4>
+            <p>
+             It's developed a system to detect the onset of brain strokes using MRI reports and lifestyle data. The project accurately identifies stroke incidents, predicts the advisability of thrombolysis, and offers preventive mensure to mitigate stroke progression
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    
+
+    
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024</p>
+      </div>
+      <div class="top-icon">
+        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("menu-btn").onclick = function () {
+        document.getElementById("navbar").classList.toggle("active");
+      };
+
+      // Close menu when clicking outside of it
+      document.addEventListener("click", function (event) {
+        var isClickInsideMenu = document
+          .getElementById("navbar")
+          .contains(event.target);
+        var isClickInsideButton = document
+          .getElementById("menu-btn")
+          .contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideButton) {
+          document.getElementById("navbar").classList.remove("active");
+        }
+      });
+
+      // Typing effect for multiple phrases
+      const phrases = [
+        "Full-Stack Developer",
+        "React Developer",
+        "MERN Developer",
+      ];
+      let currentPhraseIndex = 0;
+
+      function typeEffect(element, text, speed) {
+        let i = 0;
+
+        function type() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            setTimeout(() => {
+              deleteEffect(element, text, speed);
+            }, 300); // Wait 1.5 seconds before deleting
+          }
+        }
+
+        type();
+      }
+
+      function deleteEffect(element, text, speed) {
+        let i = text.length;
+
+        function erase() {
+          if (i > 0) {
+            element.textContent = text.substring(0, i - 1);
+            i--;
+            setTimeout(erase, speed);
+          } else {
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            typeEffect(element, phrases[currentPhraseIndex], speed);
+          }
+        }
+
+        erase();
+      }
+
+      const typingElement = document.querySelector(".typewriter");
+      typeEffect(typingElement, phrases[currentPhraseIndex], 60);
+
+      // Vanta.js background animation
+      VANTA.NET({
+        el: ".home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xffc266,
+        backgroundColor: 0x1f242e,
+      });
+    </script>
+  </body>
+</html>
